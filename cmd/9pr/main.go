@@ -86,7 +86,7 @@ func main() {
 
 	// attach root
 	commander.nextfid = 1
-	if _, err := commander.session.Attach(commander.ctx, commander.nextfid, p9p.NOFID, "anyone", "/"); err != nil {
+	if _, err := commander.session.Attach(commander.ctx, commander.nextfid, p9p.NOFID, "nobody", ""); err != nil {
 		log.Fatalln(err)
 	}
 	commander.rootfid = commander.nextfid

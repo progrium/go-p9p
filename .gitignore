@@ -22,3 +22,7 @@ _testmain.go
 *.exe
 *.test
 *.prof
+
+/9pr
+/9ps
+/.history

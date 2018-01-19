@@ -17,7 +17,7 @@ var (
 )
 
 func init() {
-	flag.StringVar(&root, "root", "~/", "root of filesystem to serve over 9p")
+	flag.StringVar(&root, "root", "/", "root of filesystem to serve over 9p")
 	flag.StringVar(&addr, "addr", ":5640", "bind addr for 9p server, prefix with unix: for unix socket")
 }
 
@@ -32,6 +32,7 @@ func main() {
 		addr = addr[5:]
 	}
 
+	log.Println("listening on", addr)
 	listener, err := net.Listen(proto, addr)
 	if err != nil {
 		log.Fatalln("error listening:", err)

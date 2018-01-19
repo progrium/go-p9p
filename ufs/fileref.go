@@ -4,7 +4,7 @@ import (
 	"os"
 	"sync"
 
-	p9p "github.com/docker/go-p9p"
+	p9p "github.com/progrium/go-p9p"
 )
 
 type FileRef struct {
